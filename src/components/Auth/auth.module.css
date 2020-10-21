@@ -1,0 +1,22 @@
+.authPage{
+    height: 100vh;
+    background-color: #262626;
+    margin: auto;
+}
+
+.authBox{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    width: 400px;
+    /* height: 400px;  */
+    background-color: rgb(146, 99, 146);
+}
+input::placeholder{
+    font-weight: 300;
+}
+
+form input{
+    text-align: center;
+    font-weight: bold;
+}

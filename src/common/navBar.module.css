@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Indie+Flower&family=David+Libre&family=Nunito:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: #262626; */
+}
+.navbar{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(../images/pexels-chan-walrus-941861.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+
+.navbarNavigation{
+    position: fixed;
+    /* border: 1px solid red; */
+    top:0;
+    right: -50vw;
+    height: 100vh;
+    background-color: #262626;
+    z-index: 10;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    transition: right .8s;
+}
+.navbar > input:checked ~ .navbarNavigation{
+    right: 0;
+}
+.foodshalaMenu{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 5%;
+    top: 10%;
+    z-index: 20;
+    
+}
+
+.navbar > input:checked ~ .foodshalaMenu > label{
+    transform: rotate(90deg);
+}
+.navbarNavigation ul li:nth-child(n) {
+    font-family: 'Dancing Script', cursive;
+    list-style: none;
+}
+.navLink{
+    color: sandybrown;
+    text-decoration:none;
+    transition: letter-spacing 0.5s;
+}
+.navLink:hover{
+    color: #bbb;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+.auth{
+    position: relative;
+}
+
+.authType{
+    display: none;
+    text-align: right;
+    text-decoration: none;
+}
+
+.authCheck:checked  ~.auth > .authType{
+    display: block;
+}
+.authType p{
+    color: #bbb;
+    transition: all .5s .5s;
+
+}
+.authType p:hover{
+    background-color: rgb(95, 93, 91);
+    color:sandybrown ;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.foodshalaMenu label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.navbar > input:checked ~ .foodshalaMenu label > div:nth-child(2){
+    opacity: 0;
+}
+.navbar > input:checked ~ .foodshalaMenu label > div:first-child{
+    transform: rotate(-40deg);
+}
+.navbar > input:checked ~ .foodshalaMenu label > div:last-child{
+    transform: rotate(40deg);
+}
+
+.foodshalaMenu div{
+    height: 4px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #d3ab55;
+    transform-origin: right;
+    transition: all 0.5s 0.5s;
+}
+.navbarLogo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+}
+.logo{
+    display: flex;
+    color: #d3ab55;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+.fontLogo{
+    color: #bbbbbb;
+    font-size: 40px;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbarLogo  p{
+    color: #d3ab55;
+    margin-top: -20px;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
